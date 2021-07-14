@@ -6,9 +6,9 @@ const server = express()
 
 server.use(express.json())
 
-server.use("/api/cars", carsRouter)
+server.use('/api/cars', carsRouter)
 
-server.use("*", (req, res, next) => {
+server.use('*', (req, res, next) => {
     next({ 
         status: 404,
         message: "Sorry, not found!",
